@@ -1,0 +1,7 @@
+version: '3'
+services:
+  rf_model_flask:
+    image: rf_model_flask
+    container_name: rf_model_flask_container
+    ports:
+      - "5000:5000"
