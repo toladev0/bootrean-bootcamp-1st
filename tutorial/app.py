@@ -4,6 +4,10 @@ import joblib
 app = Flask(__name__)
 model = joblib.load('random_forest_model.pkl')
 
+@app.route('/')
+def home():
+    return "Welcome to bootcamp1.bongrean.com"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
